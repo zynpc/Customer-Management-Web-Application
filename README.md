@@ -25,24 +25,29 @@ Bu proje, **ASP.NET Core 8 MVC** kullanarak bir **Müşteri Yönetim Sistemi** o
 ```
 
 ### 3. **Bağımlılıkları Yükleme**
-Proje klasöründe bu komutu çalıştırın: dotnet restore
+Proje klasöründe bu komutu çalıştırın: 
+```bash
+dotnet restore
+```
 
 
 ### 4. **Veritabanı Yapılandırması**
 Projede **appsettings.json** dosyası içindeki `DefaultConnection` ayarını kendi SQL Server bağlantı dizesine göre güncelleyin.
 
 **appsettings.json:**
-
+```bash
 "ConnectionStrings": {
   "DefaultConnection": "Server=.;Database=CustomerDB;Trusted_Connection=True;"
 }
-
+```
 
 Ardından, veritabanını oluşturmak için şu komutu çalıştırın: dotnet ef database update
 
 
 ### 5. **Projeyi Çalıştırma**
+```bash
  dotnet run
+```
 
 Veya Visual Studio üzerinden **F5** tuşuna basarak projeyi çalıştırabilirsiniz.
 
@@ -62,8 +67,10 @@ Veya Visual Studio üzerinden **F5** tuşuna basarak projeyi çalıştırabilirs
 
 ## Sorun Giderme
 
-Eğer paketler eksikse: dotnet restore
-
+Eğer paketler eksikse: 
+```bash
+dotnet restore
+```
 
 Eğer bağlantı hatası alırsanız, SQL Server bağlantı dizesini kontrol edin ve sunucunun çalıştığından emin olun.
 
